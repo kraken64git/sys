@@ -2,9 +2,10 @@
 #define KERNEL_H
 
 #include "stdint.h"
-#include "console.h"
-#include "gdt.h"
+#include "gdt/gdt.h"
+#include "cpu/idt.h"
+#include "drivers/console.h"
 
-void MainKernel(void);
+void MainKernel();
 
 #endif

@@ -1,11 +1,8 @@
 #include "kernel.h"
 
-void MainKernel(void)
+void MainKernel()
 {
-    InitGDT();
+    InitGdt();
+    InitIdt();
     InitConsole();
-    write("GDT Initialized Successfully.");
-    write("Console Initialized Successfully.");
-
-    while(1);
 }

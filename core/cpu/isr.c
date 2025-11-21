@@ -39,7 +39,7 @@ char *exceptionMsgs[32] = {
 
 void isrRegisterInterruptHandler(int num, Isr handler)
 {
-    write("IRQ registered");
+    writeln("IRQ registered");
     if (num < NO_INTERRUPT_HANDLERS)
         handlers[num] = handler;
 }

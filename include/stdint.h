@@ -32,6 +32,10 @@ typedef unsigned long long uintptr_t;
 #define INT64_MAX  9223372036854775807LL
 #define UINT64_MAX 18446744073709551615ULL
 
+#define BOOL unsigned char
+#define TRUE 1
+#define FALSE 0
+
 #define low16(address) (uint16_t)((address) & 0xFFFF)
 #define high16(address) (uint16_t)(((address) >> 16) & 0xFFFF)
 

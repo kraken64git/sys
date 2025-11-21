@@ -21,6 +21,11 @@ void write(const char* str)
     while (*str) { 
         putChar(*str++);
     }
+}
+
+void writeln(const char* str)
+{
+    write(str);
     putChar('\n');
 }
 
@@ -30,6 +35,20 @@ void clearScr()
         putChar(' ');
     }
     index = 0;
+}
+
+void getstrBound(char *buffer, uint8_t bound) {
+    if (!buffer) return;
+    while(1) {
+        char ch = kbGetChar();
+        if (ch == '\n') {
+            putChar('\n');
+            return ;
+        } else {
+            *buffer++ = ch;
+            putChar(ch);
+        }
+    }
 }
 
 void InitConsole()
